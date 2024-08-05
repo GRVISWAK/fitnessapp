@@ -1,0 +1,38 @@
+.wholecard{
+    padding-top: 150px;
+    background-color: rgb(126, 186, 212);
+}
+.cardrow1{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding: 40px 40px 40px 40px;
+    margin-top: 60px;
+}
+.subcards{
+    padding: 50px 70px 50px 70px;
+    transition-duration: 1s;
+}
+.workouth2{
+    color: rgb(25, 23, 23);
+}
+.h2workoutbtn{
+    background-color: black;
+    margin-top: 10px;
+}
+.h2workoutbtn:hover{
+    background-color: brown;
+}
+.subcards:hover{
+    transform: scale(1.1);
+}
+.wholecardh1{
+    font-size: 40px;
+    text-align: center;
+}
+.wholecardh2{
+    text-align: center;
+    margin-top: 40px;
+    font-size:60px;
+    color: rgb(224, 35, 35);
+}
