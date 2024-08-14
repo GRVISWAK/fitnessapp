@@ -11,6 +11,7 @@ import './Home2.css';
 import { UserContext } from './UserContext';
 import ChallengeCard from './ChallengeCard';
 import Homefeat from './Homefeat';
+<script src="https://kit.fontawesome.com/83cbe61b05.js" crossorigin="anonymous"></script>
 const Home2 = () => {
   const data = [
     { 
@@ -93,20 +94,25 @@ const Home2 = () => {
       <div className="dashboard-header">
         <div className="dashboard-metric">
           <div className="metric-title">Start today!</div>
-          <div className="metric-value">Streak</div>
+          <div className="metric-value">Streak🔥</div>
         </div>
         <div className="dashboard-metric">
           <div className="metric-title">0/4 workouts</div>
-          <div className="metric-value">Weekly Goal</div>
+          <div className="metric-value">Weekly Goal💪</div>
         </div>
         <div className="dashboard-metric">
           <div className="metric-title">0</div>
-          <div className="metric-value">Minutes</div>
+          <div className="metric-value">Minutes ⏰</div>
         </div>
         <div className="dashboard-metric">
           <div className="metric-title">0</div>
-          <div className="metric-value">Calories</div>
+          <div className="metric-value">Calories🔥</div>
         </div>
+       <div>
+        <Link to="/Weeklyprogress">
+        <button>➡️</button>
+        </Link>
+       </div>
       </div>
       <div className="recommended-section">
         <div className="rec-sub">
@@ -114,7 +120,7 @@ const Home2 = () => {
         <p>Your new favorite workout</p>
           <div class="recimg">
           <img
-            src="https://static.fitonapp.com/workout_cover/2224x880/1712.jpg" // Replace this with the actual image path
+            src="https://www.litmethod.com/cdn/shop/articles/unspecified-56.jpg?v=1700588835&width=1500" // Replace this with the actual image path
             alt="Workout"
             className="workout-image"
           />

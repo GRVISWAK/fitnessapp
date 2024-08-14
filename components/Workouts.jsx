@@ -1,6 +1,6 @@
 import React from 'react'
 import './Workout.css';
-import Navbar from './Navbar'
+import Navbar2 from './Navbars/Navbar2';
 import bicepexcerise from '../Assets/bicepexcerise.mp4'
 import Inclinebenchcurl from '../Assets/Inclinebenchcurl.mp4'
 import flatbenchcurl from '../Assets/flatbenchcurl.mp4'
@@ -17,7 +17,7 @@ import latpullups from '../Assets/latpullup.mp4'
 const Workouts = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar2></Navbar2>
         <div class="Workouts">
         <h2 class="workouthead">BICEP EXERCISE</h2>
         <div class="biceprow" >

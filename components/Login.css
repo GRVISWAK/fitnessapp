@@ -1,8 +1,8 @@
 .imageclass{
     height: 150vh;
     padding-top: 5px;
-    background-image: url(https://wallpapercave.com/wp/wp4377342.jpg);
     background-size: cover;
+    background-image: url(https://wallpapercave.com/wp/wp4377342.jpg);
 }
 .container{
     display:flex;
@@ -12,7 +12,6 @@
     width:600px;
     background:#fff;
     padding-bottom: 0px;
-    
 }
 .header{
     display:flex;

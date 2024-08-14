@@ -77,6 +77,16 @@
     margin-right: 10px;
     border-radius: 10px;
 }
+.mealbox2{
+    padding:20px 20px 20px 20px;
+    background-color: #f16868;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.mealbox2 ul li{
+    list-style: none;
+}
 .resetbtn{
     display: flex;
     justify-content: center;

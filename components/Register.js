@@ -29,14 +29,15 @@ const Login = () => {
         setPassword("");
         console.log('Email:', email);
         console.log('Password:', password);
-        navigate('/login');
+        navigate('/Form1');
       } catch (err) {
         alert(err);
       }
     }
   return (
-    <div className="imageclass">
+    <div>
       <Navbar></Navbar>
+    <div className="imageclass">
       <form className="container">
         <div className="header">
           <div className="text">SIGN UP</div>
@@ -83,6 +84,7 @@ const Login = () => {
           <button type="submit" className="submit" onClick={save} >SIGN UP</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

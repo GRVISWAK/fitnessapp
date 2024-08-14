@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Navbar from './Navbar';
+import Navbar2 from './Navbars/Navbar2';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -157,7 +157,7 @@ const Dietfoods = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar2/>
       <h2 class="head">Calculate your calories</h2>
       <div class="caloriecalimg">
         <Link to="/CalorieCalculator"><img src={caloriecalcimg}></img></Link>

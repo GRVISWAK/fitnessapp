@@ -33,8 +33,9 @@ const Login = () => {
       }
     }
   return (
-    <div className="imageclass">
+    <div>
       <Navbar></Navbar>
+    <div className="imageclass">
       <form className="container">
         <div className="header">
           <div className="text">LOGIN</div>
@@ -71,6 +72,7 @@ const Login = () => {
           <button type="submit" className="submit" onClick={save}>LOGIN</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
