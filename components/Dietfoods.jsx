@@ -23,7 +23,7 @@ const cardData = [
   { id: 6, category: 'meat', title: 'Whole egg', image: 'https://www.jerkyholic.com/wp-content/uploads/2023/04/Eggs-Smoked.jpg', carbs: 1.1, protein: 13, fats: 11, fiber: 0, calories: 155 },
   { id: 7, category: 'meat', title: 'Egg whites', image: 'https://laughingspatula.com/wp-content/uploads/2022/03/egg-white-shell-for-deviled-egg.jpg', carbs: 0.7, protein: 11, fats: 0.2, fiber: 0, calories: 52 },
   { id: 8, category: 'millets', title: 'Oats', image: 'https://img.freepik.com/free-photo/raw-barley-grain-old-dark-background_1150-37928.jpg', carbs: 66, protein: 17, fats: 7, fiber: 11, calories: 389 },
-  { id: 9, category: 'millets', title: 'Boiled Black chana', image: 'https://www.cookwithmanali.com/wp-content/uploads/2019/03/Kala-Chana-Chaat-500x375.jpg', carbs: 27, protein: 9, fats: 3, fiber: 8, calories: 164 },
+  { id: 9, category: 'millets', title: 'Boiled Black chana', image: 'https://www.cookwithmanali.com/wp-content/uploads/2019/03/Kala-Chana-Chaat-500x375.jpg', carbs: 63, protein: 19, fats: 3, fiber: 8, calories: 164 },
   { id: 10, category: 'millets', title: 'Boiled White Chana', image: 'https://media.istockphoto.com/id/1577137916/photo/cooked-chickpeas-in-white-bowl-isolated-on-white.jpg?s=612x612&w=0&k=20&c=byVp7OJMvVO6YDQFTBHof7VMdcFXaUNJ8Ab-yx586Wo=', carbs: 27, protein: 9, fats: 3, fiber: 8, calories: 164 },
   { id: 11, category: 'millets', title: 'Green Moong Dal', image: 'https://5.imimg.com/data5/SELLER/Default/2023/3/DC/CM/HQ/31738799/green-gram-500x500.jpg', carbs: 59, protein: 24, fats: 1, fiber: 16, calories: 347 },
   { id: 12, category: 'millets', title: 'Boiled Brown Beans', image: 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2020-10-How-to-Cook-a-Perfect-Pot-of-Pinto-Beans%2FHow-to-Cook-a-Perfect-Pot-of-Pinto-Beans_010', carbs: 27, protein: 9, fats: 3, fiber: 8, calories: 164 },
@@ -105,6 +105,19 @@ const Dietfoods = () => {
   };
 
   const filteredItems = filter === 'all' ? cardData : cardData.filter(item => item.category === filter);
+  const calculateTotalNutrition = () => {
+    const allMeals = Object.values(meals).flat();
+    return allMeals.reduce((acc, food) => {
+      acc.carbs += parseFloat(food.totals.carbs);
+      acc.protein += parseFloat(food.totals.protein);
+      acc.fats += parseFloat(food.totals.fats);
+      acc.fiber += parseFloat(food.totals.fiber);
+      acc.calories += parseFloat(food.totals.calories);
+      return acc;
+    }, { carbs: 0, protein: 0, fats: 0, fiber: 0, calories: 0 });
+  };
+
+  const totalNutrition = calculateTotalNutrition();
 
   const renderMeal = (mealName) => {
     const meal = meals[mealName];
@@ -156,6 +169,16 @@ const Dietfoods = () => {
           <div class="mealbox">{renderMeal('lunch')}</div>
           <div class="mealbox">{renderMeal('eveningSnacks')}</div>
           <div class="mealbox">{renderMeal('dinner')}</div>
+          <div class="mealbox2">
+        <h3 style={{color:'black',marginBottom:'20px',fontSize:'25px'}}>Total Nutrition</h3>
+        <ul>
+          <li>Total Carbs: {totalNutrition.carbs.toFixed(2)} g</li>
+          <li>Total Protein: {totalNutrition.protein.toFixed(2)} g</li>
+          <li>Total Fats: {totalNutrition.fats.toFixed(2)} g</li>
+          <li>Total Fiber: {totalNutrition.fiber.toFixed(2)} g</li>
+          <li>Total Calories: {totalNutrition.calories.toFixed(2)} kcal</li>
+        </ul>
+      </div>
         </div>
         <div class="resetbtn">
         <button  onClick={resetMeals}>Reset All</button>
